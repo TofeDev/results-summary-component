@@ -31,7 +31,7 @@ body {
     align-items: center;
     justify-content: center;
     min-height: 100vh;
-    background-color: var(--Pale-blue);
+    background-color: var(--White);
 }
 
 h2, p, button {
@@ -47,6 +47,7 @@ h2, p, button {
     display: flex;
     background-color: var(--White);
     border-radius: 30px;
+    box-shadow: 5px 5px 20px var(--Pale-blue);
 }
 
 h2 {
@@ -196,4 +197,34 @@ button {
 
 button:active {
     background-image: linear-gradient(var(--Light-slate-blue), var(--Light-royal-blue));
+}
+
+@media (width <= 400px) {
+    .container {
+        display: grid;
+        border-radius: 0;
+        margin: 0;
+    }
+
+    .result, .summary {
+        width: 300px;
+    }
+
+    .result {
+        border-radius: 0 0 30px 30px;
+    }
+
+    .summary {
+        align-content: center;
+        padding: 40px;
+        height: 450px;
+    }
+
+    .cube{
+        width: 100%;
+    }
+
+    .continue {
+        width: 111%;
+    }
 }
